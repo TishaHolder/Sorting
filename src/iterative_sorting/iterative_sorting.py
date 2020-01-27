@@ -18,7 +18,7 @@ def selection_sort( arr ):
                 smallest_index = j #1st time through=> now the smallest index will be pointing to 1      
             
         # TO-DO: swap  
-        #if arr[i] (i is cur_inde) != smallest_index (j)
+        #if arr[i] (i is cur_index) != smallest_index (j)
         #
         if cur_index != smallest_index:   
             temp = arr[cur_index]

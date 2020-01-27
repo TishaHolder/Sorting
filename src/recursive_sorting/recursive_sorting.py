@@ -8,7 +8,7 @@ def merge( arrA, arrB ):
     results = [] #array to store the result of merging the two arrays passed in
 
     # TO-DO
-    indexA = 0 #arrB index
+    indexA = 0 #arrA index
     indexB = 0 #arrB index
 
     #while not at the end of either arrA or arrB
@@ -18,7 +18,7 @@ def merge( arrA, arrB ):
         #if the item in the second array is greater than the item in the first array
         #add the item in the first array (smaller value) to the results arrary
         #increment the array index with the smaller element that was moved to results
-        if arrB[pointerB] > arrA[indexA]:
+        if arrB[indexB] > arrA[indexA]:
             results.append(arrA[indexA])
             indexA = indexA + 1
         else:
@@ -65,10 +65,7 @@ def merge_sort( arr ):
     rightSide = merge_sort(arr[slice(midpoint, len(arr))]) #len(arr) is not inclusive
 
     #once we have those small arrays we merge them back using our merge function
-    return merge(leftSide, rightSide)  
-
-   
-
+    return merge(leftSide, rightSide)     
 
 # STRETCH: implement an in-place merge sort algorithm
 def merge_in_place(arr, start, mid, end):
